@@ -5,113 +5,154 @@
     box-sizing: border-box;
 }
 
-/* GLOBAL */
 html {
     scroll-behavior: smooth;
 }
 
+/* GLOBAL */
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: #0e0e0e;
-    color: #f5f1e8;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(46, 125, 50, 0.25), transparent 35%),
+        linear-gradient(135deg, #07120a, #111111 45%, #1a1404);
+    color: #f4ead0;
     line-height: 1.6;
 }
 
+/* CONTAINERS */
 .container {
-    max-width: 900px;
+    max-width: 880px;
     margin: auto;
-    padding: 50px 22px;
+    padding: 48px 22px;
 }
 
 /* HERO */
 .hero {
     min-height: 85vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-        radial-gradient(circle at top right, #4b371c, #0e0e0e 45%);
-    color: #fff;
     display: flex;
     align-items: center;
-    padding: 50px 22px;
+    padding: 55px 22px;
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.85)),
+        repeating-linear-gradient(
+            -8deg,
+            rgba(212, 175, 55, 0.08),
+            rgba(212, 175, 55, 0.08) 2px,
+            transparent 2px,
+            transparent 12px
+        ),
+        #07120a;
+    border-bottom: 2px solid #d4af37;
 }
 
 .hero-content {
+    max-width: 1050px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    max-width: 1050px;
-    margin: auto;
-    gap: 40px;
+    gap: 38px;
 }
 
 .hero-text h1 {
-    font-size: 4rem;
-    line-height: 1;
-    margin-bottom: 14px;
-    letter-spacing: -2px;
+    font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+    font-size: 4.7rem;
+    line-height: 0.9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f7d768;
+    text-shadow: 4px 4px 0 #0b3d1a, 8px 8px 0 rgba(0,0,0,0.45);
+    margin-bottom: 18px;
 }
 
 .hero-text h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", Arial, sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #d1aa5c;
+    letter-spacing: 3px;
+    color: #9fd18b;
     margin-bottom: 18px;
 }
 
 .tagline {
     font-size: 1.25rem;
     max-width: 520px;
-    color: #ddd2bd;
+    color: #f4ead0;
+    border-left: 4px solid #d4af37;
+    padding-left: 16px;
 }
 
+/* IMAGE */
 .hero-image img {
     width: 100%;
     max-width: 340px;
-    border-radius: 18px;
-    box-shadow: 0 25px 80px rgba(0,0,0,0.7);
-    border: 1px solid rgba(209,170,92,0.45);
+    border-radius: 6px;
+    border: 3px solid #d4af37;
+    filter: contrast(1.08) saturate(0.9);
+    box-shadow: 12px 12px 0 #0b3d1a, 0 25px 70px rgba(0,0,0,0.7);
 }
 
 /* SECTIONS */
 .section {
-    background: #f5f1e8;
-    color: #111;
-    padding: 55px 0;
+    padding: 48px 0;
+    background:
+        linear-gradient(135deg, #f4ead0, #dfd0a9);
+    color: #101010;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
 .section.dark {
-    background: #111;
-    color: #f5f1e8;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            rgba(212, 175, 55, 0.06),
+            rgba(212, 175, 55, 0.06) 2px,
+            transparent 2px,
+            transparent 14px
+        ),
+        #0b160d;
+    color: #f4ead0;
 }
 
 .section h3 {
-    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0b3d1a;
     margin-bottom: 18px;
-    letter-spacing: -0.5px;
+}
+
+.section.dark h3 {
+    color: #f7d768;
+    text-shadow: 3px 3px 0 rgba(11, 61, 26, 0.9);
 }
 
 .section h3::after {
     content: "";
     display: block;
-    width: 55px;
-    height: 3px;
-    background: #d1aa5c;
-    margin-top: 10px;
+    width: 72px;
+    height: 5px;
+    background: #d4af37;
+    margin-top: 8px;
 }
 
 .section h4 {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    margin-bottom: 8px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color: #0b3d1a;
+    margin-bottom: 8px;
+}
+
+.section.dark h4 {
+    color: #d4af37;
 }
 
 .big-text {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     max-width: 720px;
+    font-weight: 600;
 }
 
 /* GRID */
@@ -124,48 +165,41 @@ body {
 /* CARDS */
 .card {
     background: rgba(255,255,255,0.75);
-    padding: 22px;
-    border-radius: 16px;
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    transition: 0.25s ease;
+    padding: 20px;
+    border: 2px solid #0b3d1a;
+    border-radius: 4px;
+    box-shadow: 8px 8px 0 rgba(11, 61, 26, 0.25);
+    transition: 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    transform: translate(-3px, -3px);
+    box-shadow: 12px 12px 0 rgba(212, 175, 55, 0.55);
 }
 
 .section.dark .card {
-    background: #1b1b1b;
-    border: 1px solid rgba(209,170,92,0.25);
-    box-shadow: none;
+    background: #111f14;
+    border: 2px solid #d4af37;
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.5);
 }
 
 .card h4 {
     font-size: 1.15rem;
-    color: #d1aa5c;
+    color: #0b3d1a;
 }
 
-.card p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.95rem;
+.section.dark .card h4 {
+    color: #f7d768;
 }
 
 /* LISTS */
 ul {
-    padding-left: 20px;
+    padding-left: 22px;
     margin-top: 12px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 li {
     margin-bottom: 8px;
-}
-
-/* TEXT */
-p {
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* CONTACT */
@@ -176,11 +210,11 @@ p {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 22px;
-    background: #050505;
-    color: #aaa;
+    padding: 24px;
+    background: #050805;
+    color: #d4af37;
+    border-top: 2px solid #d4af37;
     font-size: 0.85rem;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* MOBILE */
@@ -191,10 +225,14 @@ footer {
     }
 
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 3.3rem;
     }
 
     .tagline {
+        border-left: none;
+        border-top: 4px solid #d4af37;
+        padding-left: 0;
+        padding-top: 14px;
         margin: auto;
     }
 
