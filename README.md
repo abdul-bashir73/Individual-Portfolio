@@ -1,7 +1,7 @@
 # Abdul R. Bashir — Project Management & Operations Professional
 
 ## 🔗 Live Site
-(Add your GitHub Pages link here after publishing)
+(https://abdul-bashir73.github.io/Individual-Portfolio/)
 
 ---
 
